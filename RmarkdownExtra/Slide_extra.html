@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>RStudioでできるあんなことやこんなこと❤️</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="竹林 由武" />
+    <script src="libs/header-attrs/header-attrs.js"></script>
+    <link rel="stylesheet" href="xaringan-themer.css" type="text/css" />
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle, inverse, title-slide
+
+# RStudioでできるあんなことやこんなこと❤️
+## 　
+### 竹林 由武
+### 福島県立医科大学
+### 2020/10/31
+
+---
+
+
+background-image: url(https://pbs.twimg.com/media/CasouLgUEAQvHrL.png)
+
+&lt;style type="text/css"&gt;
+pre code, pre, code {
+  white-space: pre !important;
+  overflow-x: scroll !important;
+  word-break: keep-all !important;
+  word-wrap: initial !important;
+}
+&lt;/style&gt;
+
+
+
+
+
+
+
+
+
+???
+
+Image credit: [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Sharingan_triple.svg)
+
+---
+class: inverse, center, middle
+
+# RStudio*Rmarkdownのポテンシャル
+
+---
+class: left, top
+
+## こんなこともできます
+### 　1. 本を作れます
+### 　2. ホームページを作れます
+### 　3. ブログが作れます。
+### 　4. HTMLスライドを作れます
+
+
+---
+class: left, top
+
+## 本を作る
+
+- 詳細はこちらの[bookdown](https://bookdown.org/home/about/)のサイトから
+
+
+```r
+# remotes::install_cran("bookdown")
+library(bookdown)
+```
+
+- **[FIle]** &gt;&gt;&gt; **[New Project...]** &gt;&gt;&gt; **[New Directory...]**  &gt;&gt;&gt;   
+       **[Book Project using Book Down]** 
+
+
+.pull-left[
+&lt;img src="img/img1.png" width="1421" /&gt;
+]
+
+.pull-right[
+&lt;img src="img/img2.png" width="1400" /&gt;
+]
+
+---
+class: left, top
+
+
+## 本を作る
+
+.pull-left[
+- 新規のプロジェクトディレクトリに本作成に必要なファイルがドン
+&lt;img src="img/img3.png" width="1443" /&gt;
+]
+
+
+.pull-right[
+- とりま Build Book !!
+&lt;img src="img/img4.png" width="1099" /&gt;
+]
+
+
+
+---
+class: left, top
+
+# 本ができました。
+
+- htmlで読める本
+- pdfやepub形式にダウンロード可能
+
+&lt;video width="700" align="center" height="400" controls&gt;
+  &lt;source src="img/mov1.mov" type="video/mp4"&gt;
+&lt;/video&gt;
+
+---
+class: left, top
+
+# 本ができてました。
+
+- もちろんgithubを通じてウェブページとしてアップロード可能
+- これもこれで作りました(国里さんが)
+
+&lt;iframe src="https://ykunisato.github.io/jpa2020-tws-002/" width="100%" height="400px"&gt;&lt;/iframe&gt;
+
+
+---
+class: inverse, middle
+
+# もうこれデザイン次第でHP！！
+
+
+---
+class: inverse, middle
+# そうホームページ作れるの
+
+
+---
+class: left, top
+## ホームページを作ります
+
+- **[FIle]** &gt;&gt;&gt; **[New Project...]** &gt;&gt;&gt; **[New Directory...]**  &gt;&gt;&gt;   
+       **[Simple Rmarkdown Website]** 
+
+
+.pull-left[
+&lt;img src="img/img1.png" width="1421" /&gt;
+]
+
+.pull-right[
+&lt;img src="img/img2.png" width="1400" /&gt;
+]
+
+---
+class: left, top
+
+## ホームページを作ります
+
+.pull-left[
+- 新規のプロジェクトディレクトリに本作成に必要なファイルがちょこん
+&lt;img src="img/img6.png" width="605" /&gt;
+]
+
+
+.pull-right[
+- とりま Build Website !!
+&lt;img src="img/img7.png" width="1240" /&gt;
+]
+
+---
+class: left, top
+
+## ホームページができました。
+
+- YAMLで指定し, Rmdファイルを追加してタブを増やすのも簡単
+
+&lt;video width="700" align="center" height="400" controls&gt;
+  &lt;source src="img/mov2.mov" type="video/mp4"&gt;
+&lt;/video&gt;
+
+
+---
+class: left, top
+
+## ホームページができてました。
+
+&lt;iframe src="https://ytake2.github.io/Rsite/_site/index.html" width="100%" height="400px"&gt;&lt;/iframe&gt;
+
+---
+class: inverse, middle
+# もうちょっと今風なシュッとしたスタイルのHPがいいな〜
+
+---
+class: inverse, middle
+
+# できます！
+
+---
+class: left, top
+
+##　洒落たホームページ作る
+
+- 詳細はこちらの[blogdown](https://bookdown.org/yihui/blogdown/)のサイトから
+
+
+```r
+#remotes::install_cran("blogdown")
+library(blogdown)
+blogdown::install_hugo()
+```
+
+```
+## It seems Hugo has been installed. Use force = TRUE to reinstall or upgrade.
+```
+  
+  
+- **[FIle]** &gt;&gt;&gt; **[New Project...]**
+
+
+
+```r
+blogdown::new_site()
+```
+
+```
+## Warning in blogdown::new_site(): The directory '.'
+## is not empty
+```
+
+
+---
+class: left, top
+
+# ブログサイトができました。
+&lt;video width="700" align="center" height="400" controls&gt;
+  &lt;source src="img/mov3.mov" type="video/mp4"&gt;
+&lt;/video&gt;
+
+
+
+---
+class: left, top
+
+### Hugoから色んなデザインを選べます。
+
+&lt;iframe src="https://themes.gohugo.io/" width="100%" height="400px"&gt;&lt;/iframe&gt;
+
+
+---
+class: left, top
+
+## スライドも作れるよ
+
+- 実は今日の国里と竹林のスライドもRStudio*Rmarkdownで作ってました。
+
+
+.pull-left[
+&lt;img src="img/img8.png" width="1400" /&gt;
+]
+
+.pull-right[
+&lt;img src="img/img9.png" width="1403" /&gt;
+]
+
+---
+class: left, top
+
+## スライドも作れるよ
+
+- 実は今日の国里と竹林のスライドもRStudio*Rmarkdownで作ってました。
+
+
+&lt;img src="img/img10.png" width="3195" /&gt;
+
+---
+class: left, top
+
+## こんなこともできました
+### 　1. 本を作れました
+### 　2. ホームページを作れました
+### 　3. ブログが作れました
+### 　4. HTMLスライドを作れました
+
+
+---
+class: inverse, middle
+
+# これらの技術が
+
+---
+class: inverse, middle
+
+# 再現可能性向上を
+
+---
+class: inverse, middle
+
+# 加速する!?
+
+
+---
+class: left, top
+
+## [workflowrパッケージ](https://github.com/jdblischak/workflowr)
+
+
+&lt;img src="img/img11.png" width="1421" /&gt;
+
+
+---
+class: left, top
+
+## workflowrのExample page
+
+&lt;iframe src="https://stephenslab.github.io/wflow-divvy/index.html" width="100%" height="400px"&gt;&lt;/iframe&gt;
+
+---
+class: left, top
+
+## workflowrの使い方
+
+
+&lt;iframe src="https://ytake2.github.io/takeblog/2019/12/21/crm-stan-trialr/" width="100%" height="400px"&gt;&lt;/iframe&gt;
+
+
+---
+class: inverse, middle
+
+# RStudio*Rmarkdownで再現可能な執筆環境のもとで心理学研究を楽しみましょう！
+
+
+---
+class: inverse, middle
+
+# Enjoy!!
+
+
+
+
+
+
+
+
+
+
+
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+"highlightStyle": "github",
+"highlightLines": true,
+"countIncrementalSlides": false
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+// adds .remark-code-has-line-highlighted class to <pre> parent elements
+// of code chunks containing highlighted lines with class .remark-code-line-highlighted
+(function(d) {
+  const hlines = d.querySelectorAll('.remark-code-line-highlighted');
+  const preParents = [];
+  const findPreParent = function(line, p = 0) {
+    if (p > 1) return null; // traverse up no further than grandparent
+    const el = line.parentElement;
+    return el.tagName === "PRE" ? el : findPreParent(el, ++p);
+  };
+
+  for (let line of hlines) {
+    let pre = findPreParent(line);
+    if (pre && !preParents.includes(pre)) preParents.push(pre);
+  }
+  preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
+})(document);</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>
