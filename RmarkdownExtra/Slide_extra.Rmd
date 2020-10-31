@@ -177,6 +177,7 @@ class: left, top
 
 .pull-left[
 - 新規のプロジェクトディレクトリに本作成に必要なファイルがちょこん
+
 ```{r,echo=F}
 knitr::include_graphics("img/img6.png")
 ```
@@ -257,8 +258,11 @@ class: left, top
 
 ### Hugoから色んなデザインを選べます。
 
+[https://themes.gohugo.io/](https://themes.gohugo.io/)
+
+
 ```{r,echo=F}
-knitr::include_url("https://themes.gohugo.io/")
+knitr::include_graphics("img/img11.png")
 ```
 
 
@@ -334,7 +338,7 @@ knitr::include_graphics("img/img11.png")
 ---
 class: left, top
 
-## workflowrのExample page
+## workflowrのExample page 
 
 ```{r,echo=F}
 knitr::include_url("https://stephenslab.github.io/wflow-divvy/index.html")
